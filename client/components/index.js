@@ -5,4 +5,8 @@
  */
 export {default as Navbar} from './navbar'
 export {default as UserHome} from './user-home'
+
+export {default as Timer} from './Timer'
+export {default as Board} from './Board'
+
 export {Login, Signup} from './auth-form'
