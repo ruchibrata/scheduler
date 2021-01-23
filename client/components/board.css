@@ -1,0 +1,37 @@
+/* * {
+  box-sizing: border-box;
+}
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+}
+.app {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+} */
+
+.board {
+  background-color: dimgray;
+  cursor: crosshair;
+  margin: 0 auto;
+  position: relative;
+  width: 100%;
+  /* height: 100vh; */
+  /* overflow: hidden; */
+  flex: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: strech;
+}
+
+/* .header {
+  flex: 80%;
+}
+.control {
+  flex: 20%;
+}  */

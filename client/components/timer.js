@@ -13,11 +13,12 @@ const Timer = () => {
   }
 
   function reset() {
-    setDurationSecs(0) //(`00hr 00min 00sec`)
+    setDurationSecs(0)
     setSeconds(0)
     setIsActive(false)
   }
 
+  //show the time in hours minutes seconds
   function getTimeInHMS() {
     let today = new Date()
 
@@ -42,6 +43,7 @@ const Timer = () => {
     return timeInHMS
   }
 
+  //show the duration in minute and seconds
   function durationInMS(secs) {
     let strDuration = ''
     let mins = 0
@@ -55,7 +57,7 @@ const Timer = () => {
     if (secs < 10) {
       secs = '0' + secs
     }
-    strDuration = `${mins} minutes ${secs} seconds`
+    strDuration = `${mins} m ${secs} s`
     return strDuration
   }
 
@@ -84,10 +86,8 @@ const Timer = () => {
 
   return (
     <div className="timer">
-      <div className="currTime"> current time:{getTimeInHMS()}</div>
-      <div className="duration">
-        duration :{durationInMS(durationSecs)} {durationSecs}
-      </div>
+      <div className="currTime"> Current Time: {getTimeInHMS()}</div>
+      <div className="duration">duration: {durationInMS(durationSecs)}</div>
       <div>
         {isActive ? (
           <button type="button" onClick={toggle}>
