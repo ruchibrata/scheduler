@@ -1,6 +1,13 @@
+.timerContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .timer {
   text-align: center;
   background-color: #282c34;
+  width: 80%;
   min-height: 10vh;
   display: flex;
   flex-direction: column;
@@ -11,11 +18,11 @@
 }
 .currTime {
   font-size: 1rem;
-  padding: 2rem;
+  padding: 1rem;
 }
 .duration {
   font-size: 1rem;
-  padding: 2rem;
+  padding: 1rem;
 }
 
 .button {

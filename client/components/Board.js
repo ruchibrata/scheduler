@@ -59,9 +59,6 @@ function Board() {
 
   return (
     <div className="board" ref={parentRef}>
-      <div className="header">
-        <h2>Chalk Board</h2>
-      </div>
       <div className="control">
         <Controls handleColor={handleColor} />
         <canvas

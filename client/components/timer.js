@@ -85,22 +85,24 @@ const Timer = () => {
   )
 
   return (
-    <div className="timer">
-      <div className="currTime"> Current Time: {getTimeInHMS()}</div>
-      <div className="duration">duration: {durationInMS(durationSecs)}</div>
-      <div>
-        {isActive ? (
-          <button type="button" onClick={toggle}>
-            Pause
+    <div className="timerContainer">
+      <div className="timer">
+        <div className="currTime"> Current Time: {getTimeInHMS()}</div>
+        <div className="duration">Duration: {durationInMS(durationSecs)}</div>
+        <div>
+          {isActive ? (
+            <button type="button" onClick={toggle}>
+              Pause
+            </button>
+          ) : (
+            <button type="button" onClick={toggle}>
+              Start
+            </button>
+          )}
+          <button type="button" onClick={reset}>
+            Reset
           </button>
-        ) : (
-          <button type="button" onClick={toggle}>
-            Start
-          </button>
-        )}
-        <button type="button" onClick={reset}>
-          Reset
-        </button>
+        </div>
       </div>
     </div>
   )

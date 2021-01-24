@@ -10,5 +10,6 @@ export {default as Timer} from './Timer'
 export {default as Board} from './board'
 export {default as Controls} from './controls'
 export {default as Color} from './color'
+export {default as Editor} from './editor'
 
 export {Login, Signup} from './auth-form'
