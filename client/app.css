@@ -10,13 +10,16 @@
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: flex-start;
+  box-sizing: border-box;
 }
 
 .editorContainer {
   flex: 3;
   height: 100vh;
-  background: blue;
+  background: gray;
   margin-right: 10px;
+  display: flex;
+  flex-direction: column;
 }
 .Utilcontainer {
   flex: 1;

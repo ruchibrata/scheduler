@@ -1,28 +1,30 @@
 .timerContainer {
   display: flex;
+  background-color: #282c34;
   align-items: center;
+  flex-direction: column;
   justify-content: center;
+  color: white;
 }
 
 .timer {
   text-align: center;
-  background-color: #282c34;
-  width: 80%;
+  /* background-color: #282c34; */
+  /* width: 100%; */
   min-height: 10vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  align-items: space-between;
+  /* justify-content: center; */
   font-size: calc(10px + 2vmin);
-  color: white;
 }
 .currTime {
   font-size: 1rem;
-  padding: 1rem;
+  /* padding: 1rem; */
 }
 .duration {
   font-size: 1rem;
-  padding: 1rem;
+  /* padding: 1rem; */
 }
 
 .button {

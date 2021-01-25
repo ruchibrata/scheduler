@@ -86,23 +86,25 @@ const Timer = () => {
 
   return (
     <div className="timerContainer">
+      <h2>Let's Practice Reacto</h2>
       <div className="timer">
         <div className="currTime"> Current Time: {getTimeInHMS()}</div>
         <div className="duration">Duration: {durationInMS(durationSecs)}</div>
-        <div>
-          {isActive ? (
-            <button type="button" onClick={toggle}>
-              Pause
-            </button>
-          ) : (
-            <button type="button" onClick={toggle}>
-              Start
-            </button>
-          )}
-          <button type="button" onClick={reset}>
-            Reset
+      </div>
+      <div className="button">
+        Press Start whenever you are ready
+        {isActive ? (
+          <button type="button" onClick={toggle}>
+            Pause
           </button>
-        </div>
+        ) : (
+          <button type="button" onClick={toggle}>
+            Start
+          </button>
+        )}
+        <button type="button" onClick={reset}>
+          Reset
+        </button>
       </div>
     </div>
   )

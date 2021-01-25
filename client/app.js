@@ -6,7 +6,7 @@ import './app.css'
 // import Timer from '../client/components/timer'
 // import Board from '../client/components/Board'
 
-import {Timer, Board, Editor} from './components'
+import {Timer, Board, Notebook, Restate, REACTO} from './components'
 
 // const App = () => {
 //   return (
@@ -17,14 +17,33 @@ import {Timer, Board, Editor} from './components'
 //   )
 // }
 
+const reactoState = {
+  data: [
+    {
+      id: 1,
+      name: 'Restate',
+      desc: 'Restate your prompt below',
+      placeHolder: 'type here',
+      buttonLabel: 'now go to example'
+    },
+    {
+      id: 2,
+      name: 'Example',
+      desc: 'put some example below',
+      placeHolder: 'type here',
+      buttonLabel: 'now go to approach'
+    }
+  ]
+}
+
 const App = () => {
   return (
     <div className="container">
       <div className="editorContainer">
-        <Editor />
+        <Timer />
+        <REACTO items={reactoState} />
       </div>
       <div className="Utilcontainer">
-        <Timer />
         <Board />
       </div>
     </div>
