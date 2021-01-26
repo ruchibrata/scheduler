@@ -1,37 +1,45 @@
-import React from 'react'
+import React, {forwardRef, useRef, useImperativeHandle} from 'react'
 import './app.css'
-// import {Navbar} from './components'
-// import Routes from './routes'
-
-// import Timer from '../client/components/timer'
-// import Board from '../client/components/Board'
 
 import {Timer, Board, Notebook, Restate, REACTO} from './components'
-
-// const App = () => {
-//   return (
-//     <div>
-//       <Navbar />
-//       <Routes />
-//     </div>
-//   )
-// }
 
 const reactoState = {
   data: [
     {
       id: 1,
-      name: 'Restate',
-      desc: 'Restate your prompt below',
-      placeHolder: 'type here',
-      buttonLabel: 'now go to example'
+      name: 'R',
+      desc: 'Repeat the Question',
+      buttonLabel: 'Go to Example'
     },
     {
       id: 2,
-      name: 'Example',
-      desc: 'put some example below',
-      placeHolder: 'type here',
-      buttonLabel: 'now go to approach'
+      name: 'E',
+      desc: 'Write Out Examples',
+      buttonLabel: 'Go to Approach'
+    },
+    {
+      id: 3,
+      name: 'A',
+      desc: 'Describe Your Approaches',
+      buttonLabel: 'Go to Code'
+    },
+    {
+      id: 4,
+      name: 'C',
+      desc: 'Write Your Code',
+      buttonLabel: 'Go to Test'
+    },
+    {
+      id: 5,
+      name: 'T',
+      desc: 'Test the code',
+      buttonLabel: 'Go to Optimization'
+    },
+    {
+      id: 6,
+      name: 'O',
+      desc: 'Think about the optimization',
+      buttonLabel: 'Done'
     }
   ]
 }
@@ -39,11 +47,12 @@ const reactoState = {
 const App = () => {
   return (
     <div className="container">
-      <div className="editorContainer">
+      <div className="typingContainer">
         <Timer />
         <REACTO items={reactoState} />
+        <h2>DON'T FORGET TO PRESS DONE </h2>
       </div>
-      <div className="Utilcontainer">
+      <div className="drawingContainer">
         <Board />
       </div>
     </div>

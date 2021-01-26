@@ -18,6 +18,10 @@ const Timer = () => {
     setIsActive(false)
   }
 
+  function done() {
+    setIsActive(false)
+  }
+
   //show the time in hours minutes seconds
   function getTimeInHMS() {
     let today = new Date()
@@ -44,7 +48,8 @@ const Timer = () => {
   }
 
   //show the duration in minute and seconds
-  function durationInMS(secs) {
+
+  const durationInMS = secs => {
     let strDuration = ''
     let mins = 0
     if (secs >= 60) {
@@ -86,10 +91,11 @@ const Timer = () => {
 
   return (
     <div className="timerContainer">
-      <h2>Let's Practice Reacto</h2>
+      <h2>Let's Practice REACTO</h2>
       <div className="timer">
         <div className="currTime"> Current Time: {getTimeInHMS()}</div>
         <div className="duration">Duration: {durationInMS(durationSecs)}</div>
+        {/* <div className="totalTime">{Done()}</div> */}
       </div>
       <div className="button">
         Press Start whenever you are ready
@@ -102,6 +108,9 @@ const Timer = () => {
             Start
           </button>
         )}
+        <button type="button" onClick={done}>
+          Done
+        </button>
         <button type="button" onClick={reset}>
           Reset
         </button>
