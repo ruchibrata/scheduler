@@ -20,7 +20,7 @@ const reactoState = {
     {
       id: 3,
       name: 'A',
-      desc: 'Describe Your Approaches',
+      desc: 'Describe Your Approach',
       buttonLabel: 'Go to Code'
     },
     {
@@ -32,13 +32,13 @@ const reactoState = {
     {
       id: 5,
       name: 'T',
-      desc: 'Test the code',
+      desc: 'Test The Code',
       buttonLabel: 'Go to Optimization'
     },
     {
       id: 6,
       name: 'O',
-      desc: 'Think about the optimization',
+      desc: 'Talk about Big(O)',
       buttonLabel: 'Done'
     }
   ]
