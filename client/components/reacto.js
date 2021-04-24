@@ -9,12 +9,12 @@ class REACTO extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      editorState: EditorState.createEmpty()
+      editorState: EditorState.createEmpty(),
     }
     this.onChange = this.onChange.bind(this)
   }
 
-  onChange = editorState => {
+  onChange = (editorState) => {
     this.setState({editorState: editorState})
   }
 
@@ -22,12 +22,12 @@ class REACTO extends React.Component {
     //console.log(this.props.items)
     return (
       <div>
-        {this.props.items.data.map(item => (
+        {this.props.items.data.map((item) => (
           <React.Fragment key={item.id}>
             <h2>
               {item.name}: {item.desc}{' '}
             </h2>
-            <div>
+            <div className="customEditor">
               <CustomEditor
                 editorState={this.state.editorState}
                 onChange={this.onChange}
